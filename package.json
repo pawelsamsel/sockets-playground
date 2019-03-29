@@ -1,0 +1,54 @@
+{
+  "name": "sockets-playground",
+  "version": "0.0.1",
+  "description": "Example project with sockets and service worker",
+  "main": "server.js",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.5.1",
+    "h2o2": "^8.1.2",
+    "hapi": "^18.1.0",
+    "http-proxy": "^1.17.0",
+    "http-proxy-middleware": "^0.19.1",
+    "inert": "^5.1.2",
+    "link-module-alias": "^1.1.6",
+    "nodemon": "^1.18.10",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  },
+  "scripts": {
+    "start": "npm run start-server & BROWSER=none npm run start-webpackserver",
+    "start-server": "nodemon server",
+    "start-webpackserver": "PORT=9090 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start-production": "NODE_ENV=production node server",
+    "postinstall": "link-module-alias"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "_moduleAliases": {
+    "app": "app",
+    "controllers": "app/controllers",
+    "services": "app/services"
+  }
+}
